@@ -1,0 +1,22 @@
+
+html
+  scripts
+    - vue.js
+    - vue.min.css
+  body
+    - type: html
+      path: top.html
+    - type: vue      
+      path: vuecomp1.vue
+    - type: vue
+      comp:
+        - type: 'q-btn'
+          v-if: show
+          label: clicks
+          @click: clicks=clicks+1
+          icon: 'calendar_today'
+          content:
+            - html: 'you clicked it {clicks} times'
+
+      vars:
+        - 
